@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Rebot 7.0.1 (Python 3.11.9 on win32)" generated="2024-08-14T17:12:13.086494" rpa="false" schemaversion="5">
+<suite id="s1" name="Demo" source="C:\Users\namratab\PycharmProjects\pythonProject1\new run prallel\Demo.robot">
+<test id="s1-t1" name="Login Test [chrome]" line="13">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-14T17:11:53.551952" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-14T17:11:53.551952" elapsed="4.238454"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>name=username</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-14T17:11:57.790406" elapsed="0.437800"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-14T17:11:58.228206" level="INFO">Typing text 'Admin' into text field 'name=username'.</msg>
+<arg>name=username</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-14T17:11:58.228206" elapsed="0.091118"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-14T17:11:58.319324" level="INFO">Typing text 'admin123' into text field 'name=password'.</msg>
+<arg>name=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-14T17:11:58.319324" elapsed="0.097758"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-08-14T17:11:58.417082" level="INFO">Clicking button 'xpath=//*[@id='app']/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button'.</msg>
+<arg>xpath=//*[@id='app']/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-14T17:11:58.417082" elapsed="0.058253"/>
+</kw>
+<kw name="Wait Until Title Contains">
+<msg time="2024-08-14T17:11:58.478842" level="FAIL">No keyword with name 'Wait Until Title Contains' found.</msg>
+<arg>${EXPECTED_TITLE}</arg>
+<arg>10s</arg>
+<status status="FAIL" start="2024-08-14T17:11:58.478842" elapsed="0.001754">No keyword with name 'Wait Until Title Contains' found.</status>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<var>${ACTUAL_TITLE}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="NOT RUN" start="2024-08-14T17:11:58.480596" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${ACTUAL_TITLE}</arg>
+<arg>${EXPECTED_TITLE}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-08-14T17:11:58.480596" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-08-14T17:11:58.480596" elapsed="0.000000"/>
+</kw>
+<doc>This test case logs into OrangeHRM on Chrome and verifies the title of the page.</doc>
+<tag>chrome</tag>
+<status status="FAIL" start="2024-08-14T17:11:53.551952" elapsed="4.929652">No keyword with name 'Wait Until Title Contains' found.</status>
+</test>
+<test id="s1-t2" name="Login Test [firefox]" line="26">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-14T17:11:58.484604" level="INFO">Opening browser 'firefox' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<arg>${URL}</arg>
+<arg>firefox</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-14T17:11:58.483604" elapsed="8.370155"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>name=username</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-14T17:12:06.853759" elapsed="0.440943"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-14T17:12:07.294702" level="INFO">Typing text 'Admin' into text field 'name=username'.</msg>
+<arg>name=username</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-14T17:12:07.294702" elapsed="0.031704"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-14T17:12:07.326406" level="INFO">Typing text 'admin123' into text field 'name=password'.</msg>
+<arg>name=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-14T17:12:07.326406" elapsed="0.015633"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-08-14T17:12:07.342039" level="INFO">Clicking button 'xpath=//*[@id='app']/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button'.</msg>
+<arg>xpath=//*[@id='app']/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-14T17:12:07.342039" elapsed="1.257539"/>
+</kw>
+<kw name="Wait Until Title Contains">
+<msg time="2024-08-14T17:12:08.599578" level="FAIL">No keyword with name 'Wait Until Title Contains' found.</msg>
+<arg>${EXPECTED_TITLE}</arg>
+<arg>10s</arg>
+<status status="FAIL" start="2024-08-14T17:12:08.599578" elapsed="0.000000">No keyword with name 'Wait Until Title Contains' found.</status>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<var>${ACTUAL_TITLE}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="NOT RUN" start="2024-08-14T17:12:08.599578" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${ACTUAL_TITLE}</arg>
+<arg>${EXPECTED_TITLE}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-08-14T17:12:08.599578" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-08-14T17:12:08.599578" elapsed="0.000000"/>
+</kw>
+<doc>This test case logs into OrangeHRM on Firefox and verifies the title of the page.</doc>
+<tag>firefox</tag>
+<status status="FAIL" start="2024-08-14T17:11:58.482605" elapsed="10.116973">No keyword with name 'Wait Until Title Contains' found.</status>
+</test>
+<doc>[https://pabot.org/?ref=log|Pabot] result from 1 executions.</doc>
+<status status="FAIL" start="2024-08-14T17:11:53.403000" elapsed="15.196202"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">chrome</stat>
+<stat pass="0" fail="1" skip="0">firefox</stat>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="Demo">Demo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
